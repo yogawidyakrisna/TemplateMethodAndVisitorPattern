@@ -127,12 +127,13 @@ class PlainTextReport: Report {
 
 ### Usage
 ```swift
-let htmlReport = HTMLReport(title: "This is a a great report", text: ["reporting something important 1", 
-"reporting something important 2", 
-"reporting something important 3", 
-"reporting something important 4"])
+let htmlReport = HTMLReport(title: "This is a a great report",
+                            text: ["reporting something important 1",
+                                   "reporting something important 2",
+                                   "reporting something important 3",
+                                   "reporting something important 4"])
 
-htmlReport.outputReport() 
+htmlReport.outputReport()
 ```
 ### Output
 ```swift
@@ -150,11 +151,11 @@ htmlReport.outputReport()
 ```
 ### Usage
 ```swift
-let plainTextReport = PlainTextReport(title: "This is a a great report", text: ["reporting something important 1", 
-"reporting something important 2", 
-"reporting something important 3", 
-"reporting something important 4"])
-
+let plainTextReport = PlainTextReport(title: "This is a a great report",
+                            text: ["reporting something important 1",
+                                   "reporting something important 2",
+                                   "reporting something important 3",
+                                   "reporting something important 4"])
 plainTextReport.outputReport()  
 ```
 ### Output
