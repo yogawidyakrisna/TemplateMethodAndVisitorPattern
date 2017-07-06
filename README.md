@@ -180,24 +180,31 @@ An application with class hierarchy has to extend a new operation on each class.
 
 ### Without Visitor Pattern
 ```swift
-protocol PlanetVisitor {
-    func visit(planet: PlanetAlderaan)
-    func visit(planet: PlanetCoruscant)
-    func visit(planet: PlanetTatooine)
-}
-
 protocol Planet {
-    func planetName(name: String)
+	func givePlanetAName()
 }
 
 class PlanetAlderaan: Planet {
-	    func planetName(name: "Alderaan")
+	var planetName = ""
+	
+	func givePlanetAName() {
+		planetName = "Alderaan"
+	}
 }
+
 class PlanetCoruscant: Planet {
-        func planetName(name: "Coruscant")
+	var planetName = ""
+	
+	func givePlanetAName() {
+		planetName = "Coruscant"
+	}
 }
 class PlanetTatooine: Planet {
-	    func planetName(name: "Tatooine")
+	var planetName = ""
+	
+	func givePlanetAName() {
+		planetName = "Tatooine"
+	}
 }
 ```
 But proceeding in this way, each time you want to add an operation you must modify the interface to every single class of the hierarchy
